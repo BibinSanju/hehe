@@ -6,3 +6,31 @@
 6. Insert sample documents. 
 7. Execute the required MongoDB query and verify the output. 
 8. Stop the MongoDB server. 
+
+
+
+1. Insert multiple documents into a collection with different structures.
+2. Retrieve and analyze the documents. 
+db.students.insertMany([ { name: "jan", age: 22, department: "CS" }, 
+                          { name: "sam", grade: "B", email: "bob@example.com" },
+                          { name: "sankar", age: 21 } ])
+db.student.find().pretty() 
+
+1.mgDB inst
+Open the official website”www.mongoDB.com” 
+Click on Product and select “Try Community Edition” and then Download 
+Select the following options and download:
+Download and install the MongoDB
+Select the Path of the Application stored. Click on “mongo”
+MongoDB Shell Terminal will be Opened Successfully 
+
+2. GUI
+Open the official website”www.mongoDB.com”
+Select Products and Click on Tools > Compass.
+Click on Download Now and Install the Compass (GUI Tools)
+After Installation , Open the Application on the Windows, Click on New Conncection:
+Click on Local host as follows and click on save and connect: 
+Your MongoDB Shell is Connected to GUI Tools and displays the default Databases as shown :
+
+3.basic comd
+help-cls-exit
