@@ -1,0 +1,11 @@
+from sklearn.linear_model import LogisticRegression
+
+x = [[100, 5], [150, 10], [200, 15], [50, 2], [120, 7]]
+y = [1, 1, 1, 0, 0]
+
+model = LogisticRegression()
+model.fit(x,y)
+
+prediction = model.predict([[121, 3]])
+
+print("Spam" if prediction[0] == 0 else "Not Spam") 
