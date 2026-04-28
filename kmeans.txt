@@ -1,0 +1,16 @@
+from sklearn.cluster import KMeans
+from matplotlib import pyplot as plt
+import numpy as np
+
+x = np.array([[30, 60], [40, 80], [50, 50], [60, 30], [70, 20], [80, 90]])
+
+kmeans = KMeans(n_clusters = 2, random_state = 0)
+kmeans.fit(x)
+
+labels = kmeans.labels_
+
+plt.scatter(x[:,0],x[:,1], c = labels, cmap = "rainbow")
+plt.scatter(kmeans.cluster_centers_[:,0],
+            kmeans.cluster_centers_[:,1],
+            marker = "x" )
+plt.show()
