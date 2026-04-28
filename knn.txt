@@ -1,0 +1,12 @@
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.datasets import load_wine
+from sklearn.model_selection import train_test_split
+
+x,y = load_wine(return_X_y = True)
+train_x,test_x,train_y,test_y = train_test_split(x,y,test_size = 0.3, random_state = 43)
+
+knn = KNeighborsClassifier(n_neighbors = 5)
+knn.fit(train_x,train_y)
+
+predict = knn.predict(test_x)
+print(knn.score(test_x,test_y))
