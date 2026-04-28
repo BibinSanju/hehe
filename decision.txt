@@ -1,0 +1,12 @@
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+
+x,y = load_iris(return_X_y = True)
+
+train_x,test_x,train_y,test_y = train_test_split(x,y,test_size = .3, random_state=42)
+
+dt = DecisionTreeClassifier(max_depth = 3)
+dt.fit(train_x,train_y)
+
+print(dt.score(test_x,test_y))
